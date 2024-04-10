@@ -1,7 +1,7 @@
 import streamlit as st
 from groq import Groq
 
-client = Groq()
+client = Groq(api_key = os.environ.get("GROQ_API_KEY"),)
 st.title('Groq Chat')
 
 if 'messages' not in st.session_state:
